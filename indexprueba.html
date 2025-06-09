@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="referrer" content="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="
+  default-src * 'unsafe-inline' 'unsafe-eval';
+  img-src * data:;
+  style-src * 'unsafe-inline';
+  script-src * 'unsafe-inline';
+  font-src *;
+">
+
+  
+  <title>Mi Landing Page</title>
+  <style>
+    /* Aquí puedes poner tus estilos, este es un ejemplo básico */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    header img.logo {
+      width: 150px;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .sombra-container {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+    .sombra-container img.sombra-img {
+      width: 100%;
+      display: block;
+    }
+    .carrusel {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .flecha {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+      padding: 0 10px;
+    }
+    #contenedor-carrusel {
+      overflow-x: auto;
+      display: flex;
+      gap: 10px;
+      scroll-behavior: smooth;
+      max-width: 600px;
+    }
+    #contenedor-carrusel img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .texto-paginado {
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+    #texto-carrusel .pagina {
+      display: none;
+    }
+    #texto-carrusel .pagina.activo {
+      display: block;
+    }
+    .controles-texto button {
+      padding: 8px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .boton-contacto {
+      padding: 12px 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    #contacto {
+      max-width: 600px;
+    }
+    #contacto form input,
+    #contacto form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    #contacto form button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #btn-whatsapp {
+      display: inline-block;
+      margin-top: 10px;
+      color: #25d366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Logo animado -->
+  <header>
+    <img src="logo-caricatura.svg" alt="Logo animado" class="logo" />
+  </header>
+
+  <!-- 2. Imagen con sombra -->
+  <section class="sombra-container">
+    <img src="Imagen_principal.png" alt="Imagen con sombra" class="sombra-img" />
+  </section>
+
+  <!-- 3. Carrusel -->
+  <section class="carrusel">
+    <button id="flecha-izq" class="flecha">&#8592;</button>
+    <div class="imagenes" id="contenedor-carrusel">
+      <img src="Imagen1.jpg" alt="Imagen 1" />
+      <img src="Imagen2.png" alt="Imagen 2" />
+      <img src="Imagen3.jpg" alt="Imagen 3" />
+      <img src="Imagen4.png" alt="Imagen 4" />
+      <img src="imagen5.jpg" alt="Imagen 5" />
+      <img src="imagen6.png" alt="Imagen 6" />
+      <img src="imagen7.png" alt="Imagen 7" />
+      <img src="Imagen8.jpg" alt="Imagen 8" />
+    </div>
+    <button id="flecha-der" class="flecha">&#8594;</button>
+  </section>
+
+  <!-- 4. Texto paginado -->
+  <section class="contenido texto-paginado">
+    <h2>¿Tu empresa ya tiene su Plan Estratégico de Seguridad Vial?</h2>
+    <div id="texto-carrusel" class="texto-carrusel">
+      <div class="pagina activo">
+        <p>
+          Cumple con la normativa y evita sanciones. Te ayudamos a crear, implementar y reportar tu P.E.S.
+        </p>
+        <h3>Importancia legal del P.E.S.</h3>
+        <p>
+          La ley exige que toda empresa que opere con vehículos, propios o contratados, tenga un Plan Estratégico de Seguridad Vial. Nosotros nos encargamos de todo: diagnóstico, elaboración, capacitación y reporte ante las autoridades.
+        </p>
+      </div>
+      <div class="pagina">
+        <h3>¿A quién aplica el P.E.S.?</h3>
+        <ul>
+          <li>Empresas de logística, construcción o mensajería</li>
+          <li>Entidades públicas</li>
+          <li>Empresas que asignan vehículos a empleados</li>
+          <li>Contratistas con flotas o transporte contratado</li>
+          <li>Colegios, universidades, hospitales, etc.</li>
+        </ul>
+      </div>
+      <div class="pagina">
+        <h3>Servicios que ofrecemos</h3>
+        <ul>
+          <li>✅ Diagnóstico de cumplimiento legal</li>
+          <li>✅ Elaboración del Plan Estratégico de Seguridad Vial (P.E.S.)</li>
+          <li>✅ Implementación y formación a empleados</li>
+          <li>✅ Informe técnico y reporte ante entes de control</li>
+          <li>✅ Acompañamiento en auditorías e inspecciones</li>
+          <li>✅ Actualización y seguimiento anual</li>
+        </ul>
+      </div>
+      <div class="pagina">
+        <h3>Beneficios</h3>
+        <ul>
+          <li>Cumplimiento legal</li>
+          <li>Prevención de accidentes laborales viales</li>
+          <li>Evita multas o sanciones por incumplimiento</li>
+          <li>Imagen responsable y cultura de prevención</li>
+        </ul>
+      </div>
+      <div class="pagina">
+        <h3>¿Tu empresa ya reportó su P.E.S. ante las autoridades?</h3>
+        <p>Agenda una consulta gratuita y te ayudamos con el diagnóstico inicial.</p>
+        <button>Agenda tu consulta</button>
+        <button>Solicita tu plan</button>
+      </div>
+    </div>
+    <div class="controles-texto">
+      <button id="btn-prev" disabled>&#8592; Anterior</button>
+      <button id="btn-next">&#8594; Siguiente</button>
+    </div>
+  </section>
+
+  <!-- 5. Botón que lleva al formulario -->
+  <section class="contenido">
+    <button class="boton-contacto" id="btn-contacto">Contáctenos</button>
+  </section>
+
+  <!-- 6. Formulario de contacto -->
+  <section id="contacto">
+    <h2>Formulario de Contacto</h2>
+    <form action="https://formsubmit.co/sandraagudelo3012@gmail.com" method="POST" id="form-contacto">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo" required />
+      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+      <a id="btn-whatsapp" href="https://wa.me/573175618461" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
+    </form>
+  </section>
+
+ <link rel="stylesheet" href="Styles.css" />
+ <script src="script.js"></script>
+</body>
+</html>

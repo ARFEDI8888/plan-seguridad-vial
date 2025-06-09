@@ -1,0 +1,195 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #fff;
+  color: #333;
+}
+header {
+  text-align: center;
+  padding: 20px 0;
+  background: #f0f0f0;
+}
+header img.logo {
+  width: 120px;
+  animation: logoAnim 3s infinite alternate ease-in-out;
+}
+@keyframes logoAnim {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(10deg) scale(1.1); }
+}
+
+/* --- Imagen con sombra --- */
+.sombra-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.sombra-img {
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+/* --- Carrusel básico horizontal --- */
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+.imagenes {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  max-width: 80%;
+  gap: 10px;
+  padding: 10px 0;
+}
+.imagenes img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.imagenes img:hover {
+  transform: scale(1.2);
+  z-index: 5;
+}
+
+.flecha {
+  font-size: 2rem;
+  cursor: pointer;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 0 12px;
+  user-select: none;
+}
+
+/* --- Texto paginado --- */
+.texto-paginado {
+  max-width: 700px;
+  margin: 30px auto 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.texto-paginado h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.texto-carrusel .pagina {
+  display: none;
+}
+.texto-carrusel .pagina.activo {
+  display: block;
+}
+.controles-texto {
+  text-align: center;
+  margin-top: 15px;
+}
+.controles-texto button {
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.controles-texto button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+.controles-texto button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* --- Botón contacto --- */
+.boton-contacto {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #28a745;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  transition: background-color 0.3s;
+}
+.boton-contacto:hover {
+  background-color: #218838;
+}
+
+/* --- Formulario --- */
+#contacto {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  padding: 20px;
+  background: #eee;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+#contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#form-contacto input,
+#form-contacto textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+#form-contacto button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#form-contacto button:hover {
+  background-color: #0056b3;
+}
+#btn-whatsapp {
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+#btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+#contenedor-carrusel img {
+  transition: transform 0.3s ease;
+}
+
+#contenedor-carrusel img:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  position: relative;
+}
